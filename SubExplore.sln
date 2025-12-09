@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubExplore", "SubExplore.csproj", "{41C18797-1CBD-406A-8DE7-7813A7277452}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\nigos\Downloads\files\DOCUMENTATION_UTILISATEUR.md = C:\Users\nigos\Downloads\files\DOCUMENTATION_UTILISATEUR.md
+		C:\Users\nigos\Downloads\files\TASK_TRACKER_SUBEXPLORE.md = C:\Users\nigos\Downloads\files\TASK_TRACKER_SUBEXPLORE.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents Fondamentaux", "Documents Fondamentaux", "{ED49A3ED-C74D-4250-8DFD-73B134E88DD8}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\nigos\Downloads\files\cahier-des-charges-final.md = C:\Users\nigos\Downloads\files\cahier-des-charges-final.md
+		C:\Users\nigos\Downloads\files\ROADMAP_VISION_FUTURE.md = C:\Users\nigos\Downloads\files\ROADMAP_VISION_FUTURE.md
+		C:\Users\nigos\Downloads\files\GUIDE_IMPLEMENTATION_SUBEXPLORE.md = C:\Users\nigos\Downloads\files\GUIDE_IMPLEMENTATION_SUBEXPLORE.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Architecture et Développement", "Architecture et Développement", "{ECC71A79-AD5C-4683-8C84-EB84828723DE}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\nigos\Downloads\files\API_REST_DOCUMENTATION.md = C:\Users\nigos\Downloads\files\API_REST_DOCUMENTATION.md
+		C:\Users\nigos\Downloads\files\DESIGN_PATTERNS_ARCHITECTURE_AVANCEE.md = C:\Users\nigos\Downloads\files\DESIGN_PATTERNS_ARCHITECTURE_AVANCEE.md
+		C:\Users\nigos\Downloads\files\GUIDE_OPTIMISATION_PERFORMANCE.md = C:\Users\nigos\Downloads\files\GUIDE_OPTIMISATION_PERFORMANCE.md
+		C:\Users\nigos\Downloads\files\GUIDE_OPTIMISATION_PERFORMANCES.md = C:\Users\nigos\Downloads\files\GUIDE_OPTIMISATION_PERFORMANCES.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base de Données", "Base de Données", "{462FD3E8-248F-4DC2-B44B-5428D148A80C}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\nigos\Downloads\files\SUPABASE_DATABASE_SETUP.sql = C:\Users\nigos\Downloads\files\SUPABASE_DATABASE_SETUP.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests et Déploiement", "Tests et Déploiement", "{02F3C832-DDAB-4E84-98AB-B14418A51B58}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\nigos\Downloads\files\GUIDE_CONTRIBUTION_EQUIPE.md = C:\Users\nigos\Downloads\files\GUIDE_CONTRIBUTION_EQUIPE.md
+		C:\Users\nigos\Downloads\files\GUIDE_TESTS_DEPLOYMENT_CICD.md = C:\Users\nigos\Downloads\files\GUIDE_TESTS_DEPLOYMENT_CICD.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sécurité", "Sécurité", "{BAA231EB-4258-433F-8B63-7A6C5D2B65B1}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\nigos\Downloads\files\GUIDE_SECURITE_RGPD.md = C:\Users\nigos\Downloads\files\GUIDE_SECURITE_RGPD.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Opérations", "Opérations", "{A536ECBC-3FD4-40F1-B416-97AB4882E3B3}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\nigos\Downloads\files\GUIDE_MAINTENANCE_OPERATIONS.md = C:\Users\nigos\Downloads\files\GUIDE_MAINTENANCE_OPERATIONS.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41C18797-1CBD-406A-8DE7-7813A7277452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C18797-1CBD-406A-8DE7-7813A7277452}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C18797-1CBD-406A-8DE7-7813A7277452}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{41C18797-1CBD-406A-8DE7-7813A7277452}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C18797-1CBD-406A-8DE7-7813A7277452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C18797-1CBD-406A-8DE7-7813A7277452}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ED49A3ED-C74D-4250-8DFD-73B134E88DD8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{ECC71A79-AD5C-4683-8C84-EB84828723DE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{462FD3E8-248F-4DC2-B44B-5428D148A80C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{02F3C832-DDAB-4E84-98AB-B14418A51B58} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{BAA231EB-4258-433F-8B63-7A6C5D2B65B1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{A536ECBC-3FD4-40F1-B416-97AB4882E3B3} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9886A2B-DDC0-41AE-B9FC-38494556B29B}
+	EndGlobalSection
+EndGlobal
