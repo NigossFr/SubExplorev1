@@ -57,8 +57,8 @@ dotnet workload list                # Vérifier android, ios, maccatalyst
 
 ### 1. Cloner le repository
 ```bash
-git clone https://github.com/votre-repo/subexplore.git
-cd subexplore
+git clone https://github.com/NigossFr/SubExplorev1.git
+cd SubExplorev1
 ```
 
 ### 2. Restaurer les packages NuGet
@@ -95,19 +95,46 @@ dotnet build -t:Run -f net9.0-android
 
 ## 📋 État du Projet
 
-### Phase 1: Configuration Initiale (En cours)
+### Phase 1: Configuration Initiale (35% - 7/20 tâches)
 - [x] **TASK-001:** Structure de solution .NET MAUI ✅
   - Solution créée avec .NET 9.0
   - Support Android API 24+ (Android 7.0)
   - Support iOS 14.0+
   - Support Windows 10.0.19041.0+
   - Compilation sans erreurs ni warnings
-- [ ] **TASK-002:** Configuration Clean Architecture
-- [ ] **TASK-003:** Installation des packages NuGet
-- [ ] **TASK-004:** Configuration MVVM
-- [ ] **TASK-005:** Configuration Supabase
 
-**Progression globale:** 1/234 tâches (0.4%)
+- [x] **TASK-002:** Configuration Clean Architecture ✅
+  - 4 projets créés (Domain, Application, Infrastructure, API)
+  - Structure de dossiers logique
+  - Références entre projets configurées
+
+- [x] **TASK-003:** Installation des packages NuGet ✅
+  - Domain: FluentValidation 12.1.0, ErrorOr 2.0.1
+  - Application: MediatR 13.1.0, AutoMapper 15.1.0
+  - Infrastructure: supabase-csharp 0.16.2, Npgsql 10.0.0
+  - Mobile: CommunityToolkit.Mvvm 8.4.0, CommunityToolkit.Maui 9.1.1
+
+- [x] **TASK-004:** Configuration MVVM ✅
+  - BaseViewModel avec CommunityToolkit.Mvvm
+  - Services (INavigationService, IDialogService)
+  - Dependency Injection configurée
+
+- [x] **TASK-005:** Configuration Supabase ✅
+  - Projet Supabase créé (SubExplorev1)
+  - Connexion testée et validée
+  - Variables d'environnement configurées
+
+- [x] **TASK-006:** Configuration des secrets ✅
+  - User Secrets configurés pour API
+  - appsettings.Development.json créé
+  - Secrets protégés par .gitignore
+
+- [x] **TASK-007:** Configuration Git ✅
+  - Repository Git initialisé
+  - Premier commit créé
+  - Synchronisé sur GitHub
+
+**Progression globale:** 7/234 tâches (3.0%)
 
 Voir le fichier [TASK_TRACKER_SUBEXPLORE.md](./Documentation/TASK_TRACKER_SUBEXPLORE.md) pour le suivi détaillé.
 
@@ -117,9 +144,14 @@ Toute la documentation est disponible dans le dossier `Documentation/`:
 
 ### Documents Essentiels
 - **[TASK_TRACKER_SUBEXPLORE.md](./Documentation/TASK_TRACKER_SUBEXPLORE.md)** - Suivi des 234+ tâches
+- **[GETTING_STARTED.md](./Documentation/GETTING_STARTED.md)** - Guide de premier lancement
 - **cahier-des-charges-final.md** - Spécifications complètes
 - **ROADMAP_VISION_FUTURE.md** - Vision et planning 24 mois
 - **GUIDE_IMPLEMENTATION_SUBEXPLORE.md** - Guide pratique
+
+### Configuration
+- **[SUPABASE_CONFIGURATION_GUIDE.md](./Documentation/SUPABASE_CONFIGURATION_GUIDE.md)** - Configuration Supabase détaillée
+- **[SECRETS_CONFIGURATION_GUIDE.md](./Documentation/SECRETS_CONFIGURATION_GUIDE.md)** - Gestion des secrets et variables d'environnement
 
 ### Architecture
 - **DESIGN_PATTERNS_ARCHITECTURE_AVANCEE.md** - Clean Architecture/MVVM
@@ -136,21 +168,25 @@ Toute la documentation est disponible dans le dossier `Documentation/`:
 
 ## 🎯 Prochaines Étapes
 
-1. **TASK-002:** Créer la structure Clean Architecture
-   - Projet Domain (entités, interfaces)
-   - Projet Application (use cases, CQRS)
-   - Projet Infrastructure (repositories, services)
-   - Projet API (ASP.NET Core Web API)
+1. **TASK-008:** Documentation de configuration ⏳ (En cours)
+   - ✅ README.md mis à jour
+   - ⏳ Guide de premier lancement (GETTING_STARTED.md)
 
-2. **TASK-003:** Installer les packages NuGet essentiels
-   - MediatR, FluentValidation, AutoMapper
-   - Supabase SDK
-   - CommunityToolkit.Mvvm
+2. **TASK-009:** Exécution du script SQL Supabase
+   - Créer les extensions PostgreSQL (PostGIS)
+   - Créer les tables principales
+   - Configurer Row Level Security (RLS)
+   - Créer les indexes et contraintes
 
-3. **TASK-005:** Configurer Supabase
-   - Créer projet Supabase
-   - Exécuter script SQL (1000+ lignes)
-   - Configurer Auth et Storage
+3. **TASK-010:** Configuration Row Level Security
+   - Vérifier activation RLS sur toutes les tables
+   - Tester les policies de lecture publique
+   - Vérifier isolation des données utilisateurs
+
+4. **TASK-011:** Configuration Storage Supabase
+   - Créer buckets (avatars, spot-photos, certification-docs)
+   - Configurer les policies de storage
+   - Tester upload/download
 
 ## 🤝 Contribution
 
@@ -186,9 +222,8 @@ Exemple: `feat(spots): add nearby spots search functionality`
 ## 📞 Support
 
 Pour toute question ou problème :
-- 📧 Email: support@subexplore.app
-- 🐛 Issues: [GitHub Issues](https://github.com/votre-repo/subexplore/issues)
-- 📖 Wiki: [Documentation Wiki](https://github.com/votre-repo/subexplore/wiki)
+- 🐛 Issues: [GitHub Issues](https://github.com/NigossFr/SubExplorev1/issues)
+- 📖 Documentation: [Documentation complète](https://github.com/NigossFr/SubExplorev1/tree/main/Documentation)
 
 ## 📄 Licence
 
@@ -197,5 +232,6 @@ Pour toute question ou problème :
 ---
 
 **Version actuelle:** 0.1.0-alpha
-**Dernière mise à jour:** 2025-11-28
+**Dernière mise à jour:** 2025-12-09
 **Statut:** 🟡 En développement actif
+**Repository:** https://github.com/NigossFr/SubExplorev1

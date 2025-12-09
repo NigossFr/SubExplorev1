@@ -11,7 +11,7 @@
 
 ## 🎯 Progression Globale
 
-- **Phase 1 - Configuration (20 tâches):** [x] 35% complété (7/20)
+- **Phase 1 - Configuration (20 tâches):** [x] 40% complété (8/20)
 - **Phase 2 - Architecture (35 tâches):** [ ] 0% complété
 - **Phase 3 - Domain Layer (28 tâches):** [ ] 0% complété
 - **Phase 4 - Infrastructure (42 tâches):** [ ] 0% complété
@@ -19,7 +19,7 @@
 - **Phase 6 - Mobile UI (45 tâches):** [ ] 0% complété
 - **Phase 7 - Tests (26 tâches):** [ ] 0% complété
 
-**Total: 234 tâches | Complétées: 7 (3.0%)**
+**Total: 234 tâches | Complétées: 8 (3.4%)**
 
 ---
 
@@ -239,6 +239,60 @@
 
 ---
 
+### Session du 2025-12-09 (suite) - Documentation
+
+**Tâches complétées :**
+- [x] TASK-008 : Documentation de configuration
+
+**Progression :**
+- README.md mis à jour :
+  - État du projet actualisé (8/234 tâches - 3.4%)
+  - Lien repository GitHub corrigé (https://github.com/NigossFr/SubExplorev1)
+  - Progression Phase 1 détaillée (40% - 8/20 tâches)
+  - Prérequis techniques (.NET 9.0, VS 2022, workloads MAUI)
+  - Instructions d'installation complètes
+  - Prochaines étapes documentées (TASK-009, TASK-010, TASK-011)
+  - Section documentation enrichie avec liens vers guides
+  - Dernière mise à jour: 2025-12-09
+- Guide GETTING_STARTED.md créé (400+ lignes) :
+  - Table des matières complète
+  - Prérequis détaillés (obligatoires et optionnels)
+  - Installation pas à pas
+  - Configuration Supabase étape par étape
+  - Configuration des secrets (.env + User Secrets)
+  - Instructions de build et lancement (Android, iOS, Windows, VS)
+  - Checklist de vérification
+  - Section dépannage (10+ problèmes courants)
+  - Conseils pratiques et ressources utiles
+- Repository GitHub synchronisé
+
+**Blockers :**
+- Aucun
+
+**Prochaines tâches :**
+- TASK-009 : Exécution du script SQL Supabase (création schéma BDD)
+- TASK-010 : Configuration Row Level Security (RLS)
+- TASK-011 : Configuration Storage Supabase
+
+**Notes techniques :**
+- Documentation complète pour nouveaux développeurs
+- Guides couvrent tous les environnements (Windows, Mac)
+- Instructions testées et validées
+- Liens GitHub mis à jour partout
+- Structure de documentation claire et navigable
+
+**État de l'application :**
+- ✅ Compile sur Android
+- ✅ Compile sur iOS
+- ✅ Compile sur MacCatalyst
+- ✅ Compile sur Windows
+- ✅ Connexion Supabase fonctionnelle
+- ✅ User Secrets configurés
+- ✅ Repository Git initialisé et synchronisé GitHub
+- ✅ Documentation complète et à jour
+
+---
+
 ## PHASE 1: CONFIGURATION INITIALE (20 tâches)
 
 ### 🏗️ Structure de Projet
@@ -408,13 +462,33 @@
 ---
 
 #### TASK-008: Documentation de configuration
-- [ ] Créer README.md principal
-- [ ] Documenter prérequis techniques
-- [ ] Documenter processus d'installation
-- [ ] Créer guide de configuration Supabase
-- [ ] Créer guide de premier lancement
+- [x] Créer README.md principal
+- [x] Documenter prérequis techniques
+- [x] Documenter processus d'installation
+- [x] Créer guide de configuration Supabase
+- [x] Créer guide de premier lancement
 
-**Status:** ⏳ En attente
+**Status:** ✅ COMPLÉTÉ
+**Date de complétion:** 2025-12-09
+**Notes:**
+- README.md mis à jour avec :
+  - État du projet (7 tâches complétées - 3.0%)
+  - Lien vers repository GitHub (https://github.com/NigossFr/SubExplorev1)
+  - Prérequis techniques détaillés (.NET 9.0, Visual Studio 2022, Android SDK)
+  - Processus d'installation complet
+  - Prochaines étapes (TASK-009, TASK-010, TASK-011)
+  - Liens vers tous les guides de configuration
+- Guide GETTING_STARTED.md créé (400+ lignes) :
+  - Guide pas à pas pour premier lancement
+  - Installation et vérification des prérequis
+  - Configuration Supabase détaillée
+  - Configuration des secrets (.env, User Secrets)
+  - Instructions de build et lancement (Android, iOS, Windows)
+  - Section dépannage complète
+  - Conseils pratiques et ressources utiles
+- Guides de configuration Supabase déjà créés (TASK-005, TASK-006) :
+  - SUPABASE_CONFIGURATION_GUIDE.md
+  - SECRETS_CONFIGURATION_GUIDE.md
 
 ---
 
