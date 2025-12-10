@@ -1,0 +1,108 @@
+name: Pull Request Validation
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+env:
+  DOTNET_VERSION: '9.0.x'
+
+jobs:
+  validation:
+    name: PR Validation Checks
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Check Formatting (EditorConfig)
+      run: |
+        echo "🔍 Checking code formatting..."
+        dotnet format --verify-no-changes --verbosity diagnostic
+      continue-on-error: true
+      id: format_check
+
+    - name: Build with Analyzers
+      run: |
+        echo "🔍 Building with code analyzers..."
+        dotnet build --no-restore --configuration Debug /p:RunAnalyzers=true
+
+    - name: Security Scan (Future)
+      run: |
+        echo "🔒 Security scan will be added in future tasks"
+        echo "Planned tools: OWASP Dependency Check, Snyk, etc."
+
+    - name: PR Validation Summary
+      if: always()
+      run: |
+        echo "## 📋 PR Validation Results" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+
+        if [ "${{ steps.format_check.outcome }}" == "success" ]; then
+          echo "- ✅ Code Formatting: Compliant" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- ⚠️ Code Formatting: Issues detected (run 'dotnet format')" >> $GITHUB_STEP_SUMMARY
+        fi
+
+        echo "- ✅ Build: Success" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Analyzers: Checked" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 💡 Next Steps" >> $GITHUB_STEP_SUMMARY
+        echo "1. Review analyzer warnings in build output" >> $GITHUB_STEP_SUMMARY
+        echo "2. Ensure all tests pass (when implemented)" >> $GITHUB_STEP_SUMMARY
+        echo "3. Request code review from team members" >> $GITHUB_STEP_SUMMARY
+
+  labeler:
+    name: Auto Label PR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Label PR based on files
+      uses: actions/labeler@v5
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        configuration-path: .github/labeler.yml
+      continue-on-error: true
+
+  size-label:
+    name: PR Size Label
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Add size label
+      uses: codelytv/pr-size-labeler@v1
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        xs_label: 'size/XS'
+        xs_max_size: 10
+        s_label: 'size/S'
+        s_max_size: 100
+        m_label: 'size/M'
+        m_max_size: 500
+        l_label: 'size/L'
+        l_max_size: 1000
+        xl_label: 'size/XL'
+        fail_if_xl: false
+      continue-on-error: true

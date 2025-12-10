@@ -63,6 +63,14 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 		<PackageReference Include="Refit.HttpClientFactory" Version="8.0.0" />
+		<PackageReference Include="SonarAnalyzer.CSharp" Version="10.16.1.129956">
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		  <PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		  <PrivateAssets>all</PrivateAssets>
+		</PackageReference>
 	</ItemGroup>
 
 	<!-- Exclude other projects from Mobile compilation -->
@@ -71,10 +79,12 @@
 		<Compile Remove="SubExplore.Application\**" />
 		<Compile Remove="SubExplore.Infrastructure\**" />
 		<Compile Remove="SubExplore.API\**" />
+		<Compile Remove="Tests\**" />
 		<None Remove="SubExplore.Domain\**" />
 		<None Remove="SubExplore.Application\**" />
 		<None Remove="SubExplore.Infrastructure\**" />
 		<None Remove="SubExplore.API\**" />
+		<None Remove="Tests\**" />
 	</ItemGroup>
 
 </Project>

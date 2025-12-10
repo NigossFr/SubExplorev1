@@ -1,0 +1,52 @@
+<Project>
+  <!-- Common properties for all projects -->
+  <PropertyGroup>
+    <!-- StyleCop Analyzers Configuration -->
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+
+    <!-- Nullable Reference Types -->
+    <Nullable>enable</Nullable>
+
+    <!-- Treat Warnings as Errors in Release -->
+    <TreatWarningsAsErrors Condition="'$(Configuration)' == 'Release'">true</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+
+    <!-- Enable SonarAnalyzer rules -->
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisMode>All</AnalysisMode>
+    <AnalysisLevel>latest</AnalysisLevel>
+
+    <!-- Disable specific analyzer rules -->
+    <!-- StyleCop: Documentation rules - partially disabled -->
+    <NoWarn>$(NoWarn);SA1600</NoWarn> <!-- Elements should be documented -->
+    <NoWarn>$(NoWarn);SA1601</NoWarn> <!-- Partial elements should be documented -->
+    <NoWarn>$(NoWarn);SA1602</NoWarn> <!-- Enumeration items should be documented -->
+    <NoWarn>$(NoWarn);SA1633</NoWarn> <!-- File should have header -->
+
+    <!-- StyleCop: Disabled because EditorConfig handles these -->
+    <NoWarn>$(NoWarn);SA1200</NoWarn> <!-- Using directives placement -->
+    <NoWarn>$(NoWarn);SA1309</NoWarn> <!-- Field names underscore prefix -->
+    <NoWarn>$(NoWarn);SA1101</NoWarn> <!-- Prefix local calls with this -->
+
+    <!-- StyleCop: Optional style preferences -->
+    <NoWarn>$(NoWarn);SA1413</NoWarn> <!-- Use trailing comma -->
+    <NoWarn>$(NoWarn);SA1118</NoWarn> <!-- Parameter spanning multiple lines -->
+
+    <!-- Sonar: Disabled rules -->
+    <NoWarn>$(NoWarn);S125</NoWarn> <!-- Remove commented out code -->
+    <NoWarn>$(NoWarn);S1135</NoWarn> <!-- Track uses of "TODO" tags -->
+    <NoWarn>$(NoWarn);S3358</NoWarn> <!-- Ternary operators should not be nested -->
+  </PropertyGroup>
+
+  <!-- Additional files for analyzers -->
+  <ItemGroup>
+    <!-- StyleCop Settings File -->
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Condition="Exists('$(MSBuildThisFileDirectory)stylecop.json')">
+      <Link>stylecop.json</Link>
+    </AdditionalFiles>
+
+    <!-- EditorConfig File -->
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory).editorconfig" Condition="Exists('$(MSBuildThisFileDirectory).editorconfig')" />
+  </ItemGroup>
+
+</Project>

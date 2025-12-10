@@ -1,0 +1,89 @@
+# Auto-labeling configuration for Pull Requests
+
+# Domain Layer
+domain:
+  - changed-files:
+    - any-glob-to-any-file: 'SubExplore.Domain/**/*'
+
+# Application Layer
+application:
+  - changed-files:
+    - any-glob-to-any-file: 'SubExplore.Application/**/*'
+
+# Infrastructure Layer
+infrastructure:
+  - changed-files:
+    - any-glob-to-any-file: 'SubExplore.Infrastructure/**/*'
+
+# API Layer
+api:
+  - changed-files:
+    - any-glob-to-any-file: 'SubExplore.API/**/*'
+
+# Mobile App
+mobile:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'SubExplore.csproj'
+      - 'App.xaml*'
+      - 'MauiProgram.cs'
+      - 'Views/**/*'
+      - 'ViewModels/**/*'
+      - 'Services/**/*'
+      - 'Resources/**/*'
+
+# Documentation
+documentation:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'Documentation/**/*'
+      - '**/*.md'
+      - 'README.md'
+
+# Database
+database:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'Documentation/Base de Données/**/*'
+      - '**/*.sql'
+
+# Configuration
+configuration:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.editorconfig'
+      - 'stylecop.json'
+      - 'Directory.Build.props'
+      - '.github/**/*'
+      - 'appsettings*.json'
+      - '.env.example'
+
+# Tests
+tests:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/*Tests/**/*'
+      - '**/*.Tests/**/*'
+      - 'Tests/**/*'
+
+# Security
+security:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'Documentation/Sécurité/**/*'
+      - '**/Authentication/**/*'
+      - '**/Security/**/*'
+
+# Performance
+performance:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/Performance/**/*'
+      - '**/Caching/**/*'
+
+# Dependencies
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/*.csproj'
+      - 'Directory.Packages.props'
