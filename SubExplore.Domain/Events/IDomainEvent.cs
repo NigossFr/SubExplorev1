@@ -1,0 +1,13 @@
+namespace SubExplore.Domain.Events;
+
+/// <summary>
+/// Base interface for all domain events.
+/// Domain events represent something that happened in the domain that domain experts care about.
+/// </summary>
+public interface IDomainEvent
+{
+    /// <summary>
+    /// Gets the date and time when the event occurred.
+    /// </summary>
+    DateTime OccurredOn { get; }
+}
